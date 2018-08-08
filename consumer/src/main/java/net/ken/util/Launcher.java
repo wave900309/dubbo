@@ -14,7 +14,7 @@ public class Launcher {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[] { "classpath:consumer.xml" });
         context.start();
-        DemoService demoService = (DemoService) context.getBean("demoService");
+        DemoService demoService = context.getBean("demoService", DemoService.class);
         while (System.in.read() == 1){
             String foobar = demoService.foo();
             System.out.print(foobar);
