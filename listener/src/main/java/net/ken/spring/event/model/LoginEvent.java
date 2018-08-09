@@ -1,4 +1,4 @@
-package net.ken.spring.listener;
+package net.ken.spring.event.model;
 
 import org.springframework.context.ApplicationEvent;
 

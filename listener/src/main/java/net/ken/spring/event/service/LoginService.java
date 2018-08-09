@@ -1,5 +1,6 @@
-package net.ken.spring.listener;
+package net.ken.spring.event.service;
 
+import net.ken.spring.event.model.LoginEvent;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;

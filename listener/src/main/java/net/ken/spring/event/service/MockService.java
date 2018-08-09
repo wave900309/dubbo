@@ -1,4 +1,4 @@
-package net.ken.spring.listener;
+package net.ken.spring.event.service;
 
 import org.springframework.stereotype.Service;
 
