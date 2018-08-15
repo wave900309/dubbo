@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SingletonController {
 
     @Autowired
-    private IScoped sessionService;
+    private IScoped scoped;
 
     @RequestMapping("/nothing")
     public String nothing() {
@@ -22,8 +22,8 @@ public class SingletonController {
 
     @RequestMapping("/print")
     public String print() {
-        System.out.println(sessionService.getClass());
-        System.out.println(sessionService.getTime());
+        System.out.println(scoped);
+        System.out.println(scoped.getTime());
         return "success";
     }
 

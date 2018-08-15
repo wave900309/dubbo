@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.MessageSource;
 import org.springframework.context.MessageSourceAware;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -17,6 +18,7 @@ import java.util.Date;
 /**
  * Created by Yang, Haiqiang on 2018/06/20.
  */
+@Profile("dev")
 @Service
 public class LoginService implements ApplicationContextAware, BeanNameAware, MessageSourceAware {
 
@@ -29,7 +31,7 @@ public class LoginService implements ApplicationContextAware, BeanNameAware, Mes
     private ApplicationContext ctx = null;
 
     public void login(String user) {
-        System.out.println("publishing login event, user=" + user + ", time=" + new Date().getTime());
+        System.out.println("publishing login event, user=" + user + ", time=" + new Date());
         applicationEventPublisher.publishEvent(new LoginEvent(user));
     }
 
@@ -45,6 +47,7 @@ public class LoginService implements ApplicationContextAware, BeanNameAware, Mes
 
     @Override
     public void setMessageSource(MessageSource messageSource) {
-         System.out.println("");
+        System.out.println("");
     }
+
 }

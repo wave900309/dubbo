@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Yang, Haiqiang on 2018/08/01.
  */
-@Component
+//@Component
 public class PrintInfoBeanPostProcessor implements BeanPostProcessor, Ordered {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

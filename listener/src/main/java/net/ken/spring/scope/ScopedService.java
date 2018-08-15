@@ -10,11 +10,11 @@ import java.util.Date;
  * Created by Yang, Haiqiang on 2018/08/09.
  */
 @Service
-@Scope(scopeName = "request", proxyMode = ScopedProxyMode.INTERFACES)
-public class SessionService implements IScoped{
+@Scope(scopeName = "prototype", proxyMode = ScopedProxyMode.INTERFACES)
+public class ScopedService implements IScoped {
     private Date date = new Date();
 
-    public String getTime(){
+    public String getTime() {
         return date.toString();
     }
 }
