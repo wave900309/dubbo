@@ -1,5 +1,5 @@
 debug:
-  false
+  true
 
 server:
   port: 7777

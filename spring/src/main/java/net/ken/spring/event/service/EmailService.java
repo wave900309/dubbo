@@ -13,6 +13,6 @@ import java.util.Date;
 public class EmailService implements ApplicationListener<LoginEvent> {
     @Override
     public void onApplicationEvent(LoginEvent event) {
-        System.out.println("received login event, user=" + event.getSource() + ", time=" + new Date().getTime());
+        System.out.println("Send mail to " + event.getUser());
     }
 }

@@ -12,14 +12,14 @@
     <modules>
         <module>provider</module>
         <module>consumer</module>
-        <module>listener</module>
+        <module>spring</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.8.RELEASE</version>
+            <version>5.0.7.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -61,7 +61,11 @@
             <artifactId>jetty</artifactId>
             <version>7.0.0.pre5</version>
         </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
-
 
 </project>
