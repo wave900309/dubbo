@@ -1,4 +1,4 @@
-package net.ken.spring.aspect;
+package net.ken.spring.aspect.aop;
 
 /**
  * Created by Yang, Haiqiang on 2018/08/07.
