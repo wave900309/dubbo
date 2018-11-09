@@ -2,6 +2,7 @@ package net.ken.spring.aspect.controller;
 
 import net.ken.spring.aspect.service.AspectLogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,9 +18,9 @@ public class AspectLogController {
     @Autowired
     private AspectLogService aspectLogService;
 
-    @RequestMapping("/log")
-    public String log() {
-        aspectLogService.soutDay(new Date());
+    @RequestMapping(path = "/log")
+    public String log(Date date) {
+        aspectLogService.soutDay(date);
         return "success";
     }
 
