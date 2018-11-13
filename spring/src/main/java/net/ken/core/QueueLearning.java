@@ -8,12 +8,16 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class QueueLearning {
 
     public static void main(String[] args) throws InterruptedException {
-        ArrayBlockingQueue<String> queue = new ArrayBlockingQueue<>(1);
+        ArrayBlockingQueue<String> queue = new ArrayBlockingQueue<>(3);
         queue.put("1");
+        queue.put("2");
+        queue.put("3");
+        queue.remove("2");
+        queue.put("2.2");
         System.out.println(queue);
         RM rm = new RM<>(queue);
         rm.run();
-        queue.put("2");
+        queue.put("4");
         System.out.println(queue);
         Thread.sleep(50);
         System.out.println(queue);
