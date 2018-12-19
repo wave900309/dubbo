@@ -23,9 +23,9 @@ public class QueueLearning {
         System.out.println(queue);
     }
 
-    static class RM<E> implements Runnable{
+    static class RM<E> implements Runnable {
 
-        ArrayBlockingQueue<E>  queue;
+        ArrayBlockingQueue<E> queue;
 
         RM(ArrayBlockingQueue<E> queue) {
             this.queue = queue;
