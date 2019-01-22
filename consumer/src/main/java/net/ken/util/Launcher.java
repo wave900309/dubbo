@@ -15,9 +15,9 @@ public class Launcher {
                 new String[] { "classpath:consumer.xml" });
         context.start();
         DemoService demoService = context.getBean("demoService", DemoService.class);
-        while (System.in.read() == 1){
+        //while (System.in.read() == 1){
             String foobar = demoService.foo();
             System.out.print(foobar);
-        }
+        //}
     }
 }

@@ -48,7 +48,7 @@ public class LoginService implements ApplicationContextAware, BeanNameAware, Mes
 
     @Override
     public void setBeanName(String s) {
-
+        System.out.println("");
     }
 
     @Override
